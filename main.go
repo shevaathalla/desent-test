@@ -67,8 +67,8 @@ func main() {
 
 	// Ping endpoint
 	e.GET("/ping", func(c echo.Context) error {
-		return c.JSON(200, map[string]string{
-			"success": "true",
+		return c.JSON(200, map[string]bool{
+			"success": true,
 		})
 	})
 
