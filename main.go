@@ -67,12 +67,8 @@ func main() {
 
 	// Ping endpoint
 	e.GET("/ping", func(c echo.Context) error {
-		startTime := time.Now()
-		return c.JSON(200, models.PingResponse{
-			Status: "ok",
-			Pong:   true,
-			Time:   time.Now().Unix(),
-			Uptime: time.Since(startTime).String(),
+		return c.JSON(200, map[string]string{
+			"success": "true",
 		})
 	})
 
