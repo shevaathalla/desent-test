@@ -115,7 +115,7 @@ func main() {
 
 	// Start server
 	zl.Info().Msgf("Starting server on port %s", port)
-	if err := e.Start("http://localhost:" + port); err != nil {
+	if err := e.Start(":" + port); err != nil {
 		zl.Fatal().Err(err).Msg("Failed to start server")
 	}
 }
